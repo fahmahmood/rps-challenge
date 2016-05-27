@@ -3,7 +3,7 @@ require_relative 'Bike'
 class DockingStation
 	
 
-	attr_reader :bike, :capacity
+	attr_reader :bikes, :capacity
 
 	DEFAULT_CAPACITY = 20
 
@@ -28,7 +28,7 @@ class DockingStation
 	private 
 
 	def full?
-		@bikes.count >= DEFAULT_CAPACITY ? true : false 
+		@bikes.count >= capacity ? true : false 
 	end  
 
 	
